@@ -1,7 +1,3 @@
-// const mongoose = require("mongoose");
-// const dotenv = require("dotenv");
-// const app = require("./app");
-
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import app from "./app";
@@ -9,7 +5,7 @@ import app from "./app";
 process.on("uncaughtException", (err) => {
   console.log("UNHANDLE EXCEPTION ----shutting down 💥");
   console.log(err.name, err.message);
-  process.exit();
+  process.exit(1);
 });
 
 dotenv.config({ path: "./config.env" });

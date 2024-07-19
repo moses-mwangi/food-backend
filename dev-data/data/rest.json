@@ -1,0 +1,482 @@
+[
+  {
+    "_id": "64b5f56f7e3bcb00123d1e41",
+    "restName": "KFC",
+    "image": "/images/kfc.jpeg",
+    "location": "Downtown",
+    "deliveryPrice": 15,
+    "food_lists": [
+      {
+        "_id": "64b5f5707e3bcb00123d1e42",
+        "type": "chicken",
+        "image": "/assets/food_1.png",
+        "description": "Our crispy fried chicken is made with a secret blend of 11 herbs",
+        "rating": 4.5,
+        "price": 9.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e43",
+        "type": "burger",
+        "image": "/assets/food_2.png",
+        "description": "The delicious chicken burger features a tender, seasoned chicken patty, ",
+        "rating": 4.2,
+        "price": 7.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e44",
+        "type": "fries",
+        "image": "/assets/food_3.png",
+        "description": "Golden french fries cooked to perfection. These crispy, salty fries",
+        "rating": 4.0,
+        "price": 3.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e45",
+        "type": "nuggets",
+        "image": "/assets/food_4.png",
+        "description": "Our chicken nuggets are bite-sized pieces of chicken that are breaded and ",
+        "rating": 4.3,
+        "price": 4.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e46",
+        "type": "wrap",
+        "image": "/assets/food_5.png",
+        "description": "A delicious chicken wrap filled with tender chicken strips, fresh veggies.",
+        "rating": 4.4,
+        "price": 6.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e47",
+        "type": "wings",
+        "image": "/assets/food_6.png",
+        "description": "Spicy chicken wings coated in a flavorful sauce, these wings are the perfect balance .",
+        "rating": 4.5,
+        "price": 5.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e48",
+        "type": "salad",
+        "image": "/assets/food_7.png",
+        "description": "A fresh garden salad featuring crisp lettuce, juicy tomatoes, cucumbers, and a tangy .",
+        "rating": 4.1,
+        "price": 3.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e49",
+        "type": "drink",
+        "image": "/assets/food_8.png",
+        "description": "A refreshing beverage to complement your meal. Choose from a variety of sodas and iced teas.",
+        "rating": 4.2,
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "_id": "64b5f56f7e3bcb00123d1e50",
+    "restName": "Galitos",
+    "image": "/images/quick.png",
+    "location": "Uptown",
+    "deliveryPrice": 20,
+    "food_lists": [
+      {
+        "_id": "64b5f5707e3bcb00123d1e51",
+        "type": "chicken",
+        "image": "/assets/food_9.png",
+        "description": "Peri Peri chicken marinated in our special blend of spices and grilled to .",
+        "rating": 4.6,
+        "price": 10.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e52",
+        "type": "burger",
+        "image": "/assets/food_10.png",
+        "description": "Spicy chicken burger with a juicy grilled chicken patty, spicy sauce, fresh .",
+        "rating": 4.4,
+        "price": 8.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e53",
+        "type": "fries",
+        "image": "/assets/food_11.png",
+        "description": "Peri Peri fries seasoned with our signature blend of spices. Crispy on the .",
+        "rating": 4.2,
+        "price": 3.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e54",
+        "type": "nuggets",
+        "image": "/assets/food_12.png",
+        "description": "Peri Peri nuggets, bite-sized pieces of chicken coated in our special spice .",
+        "rating": 4.3,
+        "price": 5.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e55",
+        "type": "wrap",
+        "image": "/assets/food_13.png",
+        "description": "Spicy chicken wrap with tender chicken strips, fresh vegetables.",
+        "rating": 4.4,
+        "price": 7.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e56",
+        "type": "wings",
+        "image": "/assets/food_14.png",
+        "description": "Peri Peri wings, marinated and grilled to perfection. These wings are bursting with flavor .",
+        "rating": 4.5,
+        "price": 6.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e57",
+        "type": "salad",
+        "image": "/assets/food_15.png",
+        "description": "Peri Peri salad with fresh lettuce, tomatoes, cucumbers, and a spicy dressing.",
+        "rating": 4.2,
+        "price": 4.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e58",
+        "type": "drink",
+        "image": "/assets/food_16.png",
+        "description": "Refreshing drink to pair with your meal. Choose from a variety of sodas and juices.",
+        "rating": 4.3,
+        "price": 2.49
+      }
+    ]
+  },
+  {
+    "_id": "64b5f56f7e3bcb00123d1e59",
+    "restName": "Chicken Inn",
+    "image": "/images/chickeninn.png",
+    "location": "Midtown",
+    "deliveryPrice": 18,
+    "food_lists": [
+      {
+        "_id": "64b5f5707e3bcb00123d1e60",
+        "type": "chicken",
+        "image": "/assets/food_17.png",
+        "description": "Succulent fried chicken made with our signature spice blend. Crispy on the outside.",
+        "rating": 4.5,
+        "price": 9.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e61",
+        "type": "burger",
+        "image": "/assets/food_18.png",
+        "description": "Delicious chicken burger with a seasoned chicken patty, fresh lettuce, tomatoes.",
+        "rating": 4.3,
+        "price": 7.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e62",
+        "type": "fries",
+        "image": "/assets/food_19.png",
+        "description": "Crispy french fries seasoned with our special spice mix. Perfectly golden and delicious.",
+        "rating": 4.1,
+        "price": 3.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e63",
+        "type": "nuggets",
+        "image": "/assets/food_20.png",
+        "description": "Bite-sized chicken nuggets fried to golden perfection. A favorite for both kids and adults.",
+        "rating": 4.4,
+        "price": 4.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e64",
+        "type": "wrap",
+        "image": "/assets/food_21.png",
+        "description": "Chicken wrap with seasoned chicken strips, fresh veggies, and a tangy sauce, all wrapped .",
+        "rating": 4.3,
+        "price": 6.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e65",
+        "type": "wings",
+        "image": "/assets/food_22.png",
+        "description": "Spicy chicken wings coated in a flavorful sauce. These wings are packed with flavort.",
+        "rating": 4.5,
+        "price": 5.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e66",
+        "type": "salad",
+        "image": "/assets/food_23.png",
+        "description": "Fresh garden salad with crisp lettuce, tomatoes, cucumbers, and a tangy dressing.",
+        "rating": 4.2,
+        "price": 3.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e67",
+        "type": "drink",
+        "image": "/assets/food_24.png",
+        "description": "Refreshing beverage to pair with your meal. Choose from a variety of sodas and iced teas.",
+        "rating": 4.2,
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "_id": "64b5f56f7e3bcb00123d1e68",
+    "restName": "Burger King",
+    "image": "/images/pizzainn.jpeg",
+    "location": "Eastside",
+    "deliveryPrice": 16,
+    "food_lists": [
+      {
+        "_id": "64b5f5707e3bcb00123d1e69",
+        "type": "burger",
+        "image": "/assets/food_25.png",
+        "description": "Our flame-grilled beef burgers are made with 100% beef patties, fresh le.",
+        "rating": 4.6,
+        "price": 5.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e70",
+        "type": "fries",
+        "image": "/assets/food_26.png",
+        "description": "Crispy french fries with a golden exterior and fluffy interior, perfectly .",
+        "rating": 4.3,
+        "price": 2.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e71",
+        "type": "nuggets",
+        "image": "/assets/food_27.png",
+        "description": "Chicken nuggets made with tender chicken breast, breaded and fried until.",
+        "rating": 4.4,
+        "price": 3.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e72",
+        "type": "salad",
+        "image": "/assets/food_28.png",
+        "description": "Fresh garden salad with a mix of crisp lettuce, tomatoes, cucumbers.",
+        "rating": 4.0,
+        "price": 3.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e73",
+        "type": "drink",
+        "image": "/assets/food_29.png",
+        "description": "A variety of refreshing beverages to choose from, including sodas, iced teas, and juices.",
+        "rating": 4.1,
+        "price": 1.49
+      }
+    ]
+  },
+  {
+    "_id": "64b5f56f7e3bcb00123d1e74",
+    "restName": "McDonald's",
+    "image": "/images/quick.png",
+    "location": "Westside",
+    "deliveryPrice": 14,
+    "food_lists": [
+      {
+        "_id": "64b5f5707e3bcb00123d1e75",
+        "type": "burger",
+        "image": "/assets/food_30.png",
+        "description": "Our classic cheeseburger made with a 100% beef patty, topped with.",
+        "rating": 4.4,
+        "price": 3.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e76",
+        "type": "fries",
+        "image": "/assets/food_31.png",
+        "description": "World-famous fries, golden and crispy on the outside, fluffy on the inside.",
+        "rating": 4.5,
+        "price": 2.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e77",
+        "type": "nuggets",
+        "image": "/assets/food_27.png",
+        "description": "Chicken McNuggets made with white meat chicken, breaded and cooked until golden.",
+        "rating": 4.3,
+        "price": 4.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e78",
+        "type": "salad",
+        "image": "/assets/food_9.png",
+        "description": "Fresh salad with a mix of greens, tomatoes, cucumbers, and a choice of dressings.",
+        "rating": 4.1,
+        "price": 4.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e79",
+        "type": "drink",
+        "image": "/assets/food_8.png",
+        "description": "A wide range of beverages, including soft drinks, iced teas, and juices.",
+        "rating": 4.2,
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "_id": "64b5f56f7e3bcb00123d1e80",
+    "restName": "Subway",
+    "image": "/images/bowl.png",
+    "location": "Downtown",
+    "deliveryPrice": 12,
+    "food_lists": [
+      {
+        "_id": "64b5f5707e3bcb00123d1e81",
+        "type": "sandwich",
+        "image": "/assets/food_13.png",
+        "description": "Freshly made sandwiches with your choice of bread, meats, vegetables, and condiments.",
+        "rating": 4.6,
+        "price": 5.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e82",
+        "type": "salad",
+        "image": "/assets/food_11.png",
+        "description": "Crisp salads made with fresh vegetables and your choice of toppings.",
+        "rating": 4.3,
+        "price": 4.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e83",
+        "type": "wrap",
+        "image": "/assets/food_16.png",
+        "description": "Delicious wraps made with fresh ingredients and a variety of dressings.",
+        "rating": 4.4,
+        "price": 6.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e84",
+        "type": "cookie",
+        "image": "/assets/food_17.png",
+        "description": "Freshly baked cookies with a variety of flavors to choose from.",
+        "rating": 4.5,
+        "price": 1.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e85",
+        "type": "drink",
+        "image": "/assets/food_23.png",
+        "description": "A selection of beverages to complement your meal, including sodas and iced teas.",
+        "rating": 4.2,
+        "price": 1.49
+      }
+    ]
+  },
+  {
+    "_id": "64b5f56f7e3bcb00123d1e86",
+    "restName": "Pizza Hut",
+    "image": "/images/pizzainn.jpeg",
+    "location": "Southside",
+    "deliveryPrice": 18,
+    "food_lists": [
+      {
+        "_id": "64b5f5707e3bcb00123d1e87",
+        "type": "pizza",
+        "image": "/assets/food_14.png",
+        "description": "Delicious pizza with a variety of toppings to choose from, baked to perfection.",
+        "rating": 4.7,
+        "price": 12.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e88",
+        "type": "pasta",
+        "image": "/assets/food_13.png",
+        "description": "A variety of pasta dishes, cooked to perfection and served with your choice of sauce.",
+        "rating": 4.5,
+        "price": 9.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e89",
+        "type": "salad",
+        "image": "/assets/food_14.png",
+        "description": "Fresh salads made with crisp lettuce, tomatoes, cucumbers, and a choice of dressings.",
+        "rating": 4.3,
+        "price": 4.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e90",
+        "type": "wings",
+        "image": "/assets/food_5.png",
+        "description": "Spicy chicken wings, coated in a flavorful sauce and cooked to perfection.",
+        "rating": 4.6,
+        "price": 8.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e91",
+        "type": "breadsticks",
+        "image": "/assets/food_3.png",
+        "description": "Warm, soft breadsticks served with marinara sauce for dipping.",
+        "rating": 4.4,
+        "price": 3.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e92",
+        "type": "drink",
+        "image": "/assets/food_4.png",
+        "description": "A variety of beverages to choose from, including sodas, iced teas, and juices.",
+        "rating": 4.3,
+        "price": 1.99
+      }
+    ]
+  },
+  {
+    "_id": "64b5f56f7e3bcb00123d1e93",
+    "restName": "Artcafes",
+    "image": "/images/artcafe.png",
+    "location": "Uptown",
+    "deliveryPrice": 17,
+    "food_lists": [
+      {
+        "_id": "64b5f5707e3bcb00123d1e94",
+        "type": "pizza",
+        "image": "/assets/food_12.png",
+        "description": "Delicious pizzas with a variety of toppings, baked to perfection.",
+        "rating": 4.7,
+        "price": 11.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e95",
+        "type": "pasta",
+        "image": "/assets/food_11.png",
+        "description": "A variety of pasta dishes, served with your choice of sauce and cooked to perfection.",
+        "rating": 4.5,
+        "price": 8.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e96",
+        "type": "salad",
+        "image": "/assets/food_22.png",
+        "description": "Fresh salads made with crisp lettuce, tomatoes, cucumbers, and a choice of dressings.",
+        "rating": 4.3,
+        "price": 4.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e97",
+        "type": "wings",
+        "image": "/assets/food_5.png",
+        "description": "Spicy chicken wings, coated in a flavorful sauce and cooked to perfection.",
+        "rating": 4.6,
+        "price": 7.99
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e98",
+        "type": "breadsticks",
+        "image": "/assets/food_3.png",
+        "description": "Warm, soft breadsticks served with marinara sauce for dipping.",
+        "rating": 4.4,
+        "price": 3.49
+      },
+      {
+        "_id": "64b5f5707e3bcb00123d1e99",
+        "type": "drink",
+        "image": "/assets/food_1.png",
+        "description": "A variety of beverages to choose from, including sodas, iced teas, and juices.",
+        "rating": 4.3,
+        "price": 1.99
+      }
+    ]
+  }
+]
