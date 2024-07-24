@@ -2,7 +2,6 @@ import express from "express";
 import morgan from "morgan";
 import mimeTypes from "mime-types";
 import cors from "cors";
-
 import cookiParser from "cookie-parser";
 import userRouter from "./routes/users";
 import userE from "./routes/userE";
@@ -11,7 +10,6 @@ import orderRouter from "./routes/orders";
 import globalErrorHandler from "./controllers/errorController";
 import AppError from "./utils/appError";
 import path from "path";
-import { auth } from "express-oauth2-jwt-bearer";
 
 const app = express();
 
@@ -57,7 +55,6 @@ app.post("/api/set-cookie", (req, res) => {
   res.cookie("yourCookieName", "cookieValue", {
     httpOnly: true,
     secure: true,
-    // sameSite: "None", // Required for cross-site requests
     sameSite: "none",
     maxAge: 24 * 60 * 60 * 1000,
   });

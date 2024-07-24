@@ -36,8 +36,8 @@ const orderSchema: Schema<IOrder> = new Schema({
   },
   status: {
     type: String,
-    enum: ["Food Processing", "Confirmed", "Out of order"],
-    default: "Food Processing",
+    enum: ["Processing", "Confirmed", "Out of order"],
+    default: "Processing",
   },
   totalAmount: {
     type: Number,

@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import Stripe from "stripe";
 import catchAsync from "../utils/catchAsync";
 import Order from "../models/orderModel";
+import AppError from "../utils/appError";
 
 const stripe = new Stripe(
   "sk_test_51Pc94CCvj25n1SVem04vih54JceXmpjdD082Q0b0r82teXzVN2IgWfsuSGjFHdrEb2915MlljPfhG9jG4oxk6oml009dflPvGy"
@@ -94,6 +95,38 @@ export const placeOrder = catchAsync(
 export const getOrders = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const order = await Order.find();
+    res.status(200).json({ status: "success", data: { order } });
+  }
+);
+
+export const getSingleOrder = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const order = await Order.findById(req.params.id);
+    console.log(order);
+
+    if (!order) {
+      return next(
+        new AppError("No document found with that ID :IvalidId", 404)
+      );
+    }
+
+    res.status(200).json({ status: "success", data: { order } });
+  }
+);
+
+export const updateOrder = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const updateData = req.body;
+
+    const order = await Order.findByIdAndUpdate(req.params.id, updateData, {
+      new: true, // Return the updated document
+      runValidators: true, // Run schema validators on update
+    });
+
+    if (!order) {
+      return res.status(404).json({ message: "Order not found" });
+    }
+
     res.status(200).json({ status: "success", data: { order } });
   }
 );

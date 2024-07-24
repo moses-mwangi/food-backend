@@ -8,7 +8,8 @@ const restaurantSchema: Schema = new Schema({
   },
   image: {
     type: String,
-    require: [true, "Restaurant should have a name"],
+    // require: [true, "Restaurant should have a name"],
+    default: "/images/quick.png",
   },
   location: {
     type: String,
@@ -23,9 +24,11 @@ const restaurantSchema: Schema = new Schema({
       type: {
         type: String,
         default: "pizza",
-        enum: ["pizza"],
       },
-      image: String,
+      image: {
+        type: String,
+        default: "/assets/food_10.png",
+      },
       description: String,
       rating: Number,
       price: Number,
