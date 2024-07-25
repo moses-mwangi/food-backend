@@ -1,4 +1,3 @@
-// const User = require("./../models/userModel");
 import AppError from "../utils/appError";
 import catchAsync from "../utils/catchAsync";
 import User from "./../models/userModel";

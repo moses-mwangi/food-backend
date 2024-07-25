@@ -77,6 +77,7 @@ const updateOne = catchAsync(
 
     res.status(200).json({
       status: "success",
+
       data: {
         data: newRestaurant,
       },

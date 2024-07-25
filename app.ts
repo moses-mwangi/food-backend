@@ -43,11 +43,11 @@ app.use(
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://food-delivery-dasboard.vercel.app",
     credentials: true,
   })
 );
-
+// https://food-delivery-dasboard.vercel.app/
 app.use(express.json());
 app.use(cookiParser());
 
