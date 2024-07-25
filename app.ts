@@ -84,3 +84,5 @@ app.all("*", (req, res, next) => {
 app.use(globalErrorHandler);
 
 export default app;
+
+// "build": "NODE_ENV=production ts-node server.ts"
