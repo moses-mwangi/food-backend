@@ -16,6 +16,25 @@ const errorController_1 = __importDefault(require("./controllers/errorController
 const appError_1 = __importDefault(require("./utils/appError"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
+const allowedOrigins = [
+    "https://food-delivery-dasboard.vercel.app",
+    "https://food-delivery-five-eta.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:3002",
+    "https://try-lake.vercel.app",
+];
+const corsOptions = {
+    origin: (origin, callback) => {
+        if (allowedOrigins.includes(origin) || !origin) {
+            callback(null, true);
+        }
+        else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
+    credentials: true,
+};
+app.use((0, cors_1.default)(corsOptions));
 app.use("/images", express_1.default.static(path_1.default.join(__dirname, "public/images"), {
     setHeaders: (res, filePath) => {
         const mimeType = mime_types_1.default.lookup(filePath);
@@ -38,11 +57,6 @@ app.use("/assets", express_1.default.static(path_1.default.join(__dirname, "publ
         }
     },
 }));
-app.use((0, cors_1.default)({
-    origin: "https://food-delivery-dasboard.vercel.app/",
-    credentials: true,
-}));
-// https://food-delivery-dasboard.vercel.app/
 app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
 app.post("/api/set-cookie", (req, res) => {

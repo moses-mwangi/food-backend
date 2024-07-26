@@ -7,6 +7,10 @@ const express_1 = __importDefault(require("express"));
 const restaurantController_1 = require("../controllers/restaurantController");
 const router = express_1.default.Router();
 router.route("/").get(restaurantController_1.getAll).post(restaurantController_1.createOne);
-router.route("/:name").get(restaurantController_1.getOneRestaurant).patch(restaurantController_1.updateOne);
+router
+    .route("/:name")
+    .get(restaurantController_1.getOneRestaurant)
+    .patch(restaurantController_1.updateOne)
+    .delete(restaurantController_1.deleteRestaurant);
 // router.route("/:id").get(getOneRestaurantById).patch(updateOne);
 exports.default = router;

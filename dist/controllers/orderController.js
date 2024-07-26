@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updateOrder = exports.getSingleOrder = exports.getOrders = exports.placeOrder = exports.testing = void 0;
+exports.deleteOrder = exports.updateOrder = exports.getSingleOrder = exports.getOrders = exports.placeOrder = exports.testing = void 0;
 const stripe_1 = __importDefault(require("stripe"));
 const catchAsync_1 = __importDefault(require("../utils/catchAsync"));
 const orderModel_1 = __importDefault(require("../models/orderModel"));
@@ -36,7 +36,6 @@ exports.placeOrder = (0, catchAsync_1.default)((req, res, next) => __awaiter(voi
         date: new Date(),
         payment: false,
     });
-    // console.log(newOrder._id);
     //// Create line items for Stripe session
     const lineItems = items.map((item) => ({
         price_data: {
@@ -55,7 +54,7 @@ exports.placeOrder = (0, catchAsync_1.default)((req, res, next) => __awaiter(voi
         payment_method_types: ["card"],
         line_items: lineItems,
         mode: "payment",
-        success_url: `http://localhost:3000/order-success?orderId=${newOrder._id}`,
+        success_url: `https://food-delivery-five-eta.vercel.app/order-success?orderId=${newOrder._id}`,
         cancel_url: `http://localhost:3000/order-cancel?orderId=${newOrder._id}`,
         metadata: {
             orderId: newOrder._id.toString(),
@@ -90,4 +89,11 @@ exports.updateOrder = (0, catchAsync_1.default)((req, res, next) => __awaiter(vo
         return res.status(404).json({ message: "Order not found" });
     }
     res.status(200).json({ status: "success", data: { order } });
+}));
+exports.deleteOrder = (0, catchAsync_1.default)((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    const order = yield orderModel_1.default.findByIdAndDelete(req.params.id);
+    if (!order) {
+        return next(new appError_1.default("No tour found with that ID :IvalidId", 404));
+    }
+    res.json(2004).json({ status: "success", data: null });
 }));

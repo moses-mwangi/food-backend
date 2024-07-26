@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updateOne = exports.getOneRestaurantById = exports.getOneRestaurant = exports.createOne = exports.getAll = void 0;
+exports.updateOne = exports.getOneRestaurantById = exports.getOneRestaurant = exports.deleteRestaurant = exports.createOne = exports.getAll = void 0;
 const appError_1 = __importDefault(require("../utils/appError"));
 const catchAsync_1 = __importDefault(require("../utils/catchAsync"));
 const restaurantModel_1 = __importDefault(require("./../models/restaurantModel"));
@@ -73,3 +73,16 @@ const updateOne = (0, catchAsync_1.default)((req, res, next) => __awaiter(void 0
     });
 }));
 exports.updateOne = updateOne;
+const deleteRestaurant = (0, catchAsync_1.default)((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    const { name } = req.params;
+    // const store = await Restaurant.findByIdAndDelete(req.params.id);
+    const store = yield restaurantModel_1.default.findOneAndDelete({ restName: name });
+    if (!store) {
+        return next(new appError_1.default("No tour found with that ID :IvalidId", 404));
+    }
+    res.status(204).json({
+        status: "success",
+        data: null,
+    });
+}));
+exports.deleteRestaurant = deleteRestaurant;
