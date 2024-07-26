@@ -19,6 +19,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3002",
   "https://try-lake.vercel.app",
+  "https://food-delivery-dasboard-pk5j.vercel.app",
 ];
 
 const corsOptions = {

@@ -4,6 +4,7 @@ import {
   getMe,
   getUser,
   createOne,
+  updateUser,
 } from "../controllers/userController";
 import { login, signup, protect } from "../controllers/authController.";
 
@@ -19,6 +20,6 @@ router.get("/logout", (req, res) => {
 });
 
 router.route("/").get(getAll).post(createOne);
-router.route("/:id").get(protect, getUser);
+router.route("/:id").get(protect, getUser).patch(updateUser);
 
 export default router;

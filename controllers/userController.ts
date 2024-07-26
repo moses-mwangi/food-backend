@@ -45,35 +45,53 @@ const createOne = catchAsync(
     });
   }
 );
+
 export const getMe = (req: Request, res: Response, next: NextFunction) => {
   res
     .status(200)
     .json({ status: "success", data: { user: (req as any).user } });
 };
 
+export const updateUser = catchAsync(async function (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
+  const user = await User.findByIdAndUpdate(
+    req.params.id,
+    { role: req.body.role },
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
+
+  if (!user) {
+    return next(new AppError("No user found with that ID :IvalidId", 404));
+  }
+
+  res.status(200).json({
+    status: "success",
+    data: { user },
+  });
+});
+
 export const getUser = catchAsync(async function (
   req: Request,
   res: Response,
   next: NextFunction
 ) {
-  const user = await User.findById(req.params.id);
+  const user = await User.findOne({ _id: req.params.id });
   console.log(user);
 
   if (!user) {
     return next(new AppError("No document found with that ID :IvalidId", 404));
   }
 
-  if (user) {
-    res.status(200).json({
-      status: "success",
-      data: { data: user },
-    });
-  } else {
-    res.status(200).json({
-      status: "success",
-      message: "The InvalidId",
-    });
-  }
+  res.status(200).json({
+    status: "success",
+    data: { data: user },
+  });
 });
 
 export { getAll, createOne };
