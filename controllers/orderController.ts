@@ -53,8 +53,6 @@ export const placeOrder = catchAsync(
       payment: false,
     });
 
-    // console.log(newOrder._id);
-
     //// Create line items for Stripe session
     const lineItems = items.map((item) => ({
       price_data: {
@@ -74,7 +72,7 @@ export const placeOrder = catchAsync(
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
-      success_url: `http://localhost:3000/order-success?orderId=${newOrder._id}`,
+      success_url: `https://food-delivery-five-eta.vercel.app/order-success?orderId=${newOrder._id}`,
       cancel_url: `http://localhost:3000/order-cancel?orderId=${newOrder._id}`,
       metadata: {
         orderId: newOrder._id!.toString(),
@@ -128,5 +126,17 @@ export const updateOrder = catchAsync(
     }
 
     res.status(200).json({ status: "success", data: { order } });
+  }
+);
+
+export const deleteOrder = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const order = await Order.findByIdAndDelete(req.params.id);
+
+    if (!order) {
+      return next(new AppError("No tour found with that ID :IvalidId", 404));
+    }
+
+    res.json(2004).json({ status: "success", data: null });
   }
 );

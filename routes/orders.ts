@@ -5,11 +5,16 @@ import {
   testing,
   getSingleOrder,
   updateOrder,
+  deleteOrder,
 } from "../controllers/orderController";
 const router: Router = express.Router();
 
 router.route("/place").get(getOrders).post(placeOrder);
-router.route("/place/:id").get(getSingleOrder).patch(updateOrder);
+router
+  .route("/place/:id")
+  .get(getSingleOrder)
+  .patch(updateOrder)
+  .delete(deleteOrder);
 router.route("/create-customer").post(testing);
 
 export default router;

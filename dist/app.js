@@ -39,9 +39,10 @@ app.use("/assets", express_1.default.static(path_1.default.join(__dirname, "publ
     },
 }));
 app.use((0, cors_1.default)({
-    origin: "http://localhost:3000",
+    origin: "https://food-delivery-dasboard.vercel.app/",
     credentials: true,
 }));
+// https://food-delivery-dasboard.vercel.app/
 app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
 app.post("/api/set-cookie", (req, res) => {

@@ -85,4 +85,29 @@ const updateOne = catchAsync(
   }
 );
 
-export { getAll, createOne, getOneRestaurant, getOneRestaurantById, updateOne };
+const deleteRestaurant = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const { name } = req.params;
+
+    // const store = await Restaurant.findByIdAndDelete(req.params.id);
+    const store = await Restaurant.findOneAndDelete({ restName: name });
+
+    if (!store) {
+      return next(new AppError("No tour found with that ID :IvalidId", 404));
+    }
+
+    res.status(204).json({
+      status: "success",
+      data: null,
+    });
+  }
+);
+
+export {
+  getAll,
+  createOne,
+  deleteRestaurant,
+  getOneRestaurant,
+  getOneRestaurantById,
+  updateOne,
+};

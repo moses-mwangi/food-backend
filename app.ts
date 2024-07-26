@@ -13,6 +13,30 @@ import path from "path";
 
 const app = express();
 
+const allowedOrigins = [
+  "https://food-delivery-dasboard.vercel.app",
+  "https://food-delivery-five-eta.vercel.app",
+  "http://localhost:3000",
+  "http://localhost:3002",
+  "https://try-lake.vercel.app",
+];
+
+const corsOptions = {
+  origin: (
+    origin: string | undefined,
+    callback: (err: Error | null, allow?: boolean) => void
+  ) => {
+    if (allowedOrigins.includes(origin!) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 app.use(
   "/images",
   express.static(path.join(__dirname, "public/images"), {
@@ -41,13 +65,6 @@ app.use(
   })
 );
 
-app.use(
-  cors({
-    origin: "https://food-delivery-dasboard.vercel.app",
-    credentials: true,
-  })
-);
-// https://food-delivery-dasboard.vercel.app/
 app.use(express.json());
 app.use(cookiParser());
 

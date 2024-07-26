@@ -11,13 +11,16 @@ process.on("uncaughtException", (err) => {
   process.exit(1);
 });
 
-const db = String(process.env.DATABASE);
+// const db = String(process.env.DATABASE);
+
+const db =
+  "mongodb+srv://mosesmwangime:4Owf3JAY8YpVbT0y@fooddelivercluster.q3ihtsr.mongodb.net/delivery?retryWrites=true&w=majority&appName=FoodDeliverCluster";
 mongoose
   .connect(db)
   .then(() => {
     console.log("Database has succefully connneccted");
   })
-  .catch((err: Error) => console.error(err));
+  .catch((err: Error) => console.error(err, "moess"));
 
 const port: number = Number(process.env.PORT) || 3003;
 const server = app.listen(port, "127.0.0.1", () => {

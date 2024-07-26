@@ -14,6 +14,6 @@ router.get("/logout", (req, res) => {
     res.clearCookie("jwt", { path: "/" });
     res.status(200).send("Logged out inback side");
 });
-router.route("/").get(userController_1.getAll);
+router.route("/").get(userController_1.getAll).post(userController_1.createOne);
 router.route("/:id").get(authController_1.protect, userController_1.getUser);
 exports.default = router;
