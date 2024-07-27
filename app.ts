@@ -14,8 +14,8 @@ import path from "path";
 const app = express();
 
 const allowedOrigins = [
-  "http://localhost:3000",
-  "http://localhost:3002",
+  // "http://localhost:3000",
+  // "http://localhost:3002",
   "https://food-delivery-bkrk.vercel.app",
   "https://food-delivery-dasboard-pk5j.vercel.app",
   "https://food-delivery-dasboard.vercel.app",
