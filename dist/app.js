@@ -17,11 +17,11 @@ const appError_1 = __importDefault(require("./utils/appError"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
 const allowedOrigins = [
-    "https://food-delivery-dasboard.vercel.app",
-    "https://food-delivery-five-eta.vercel.app",
     "http://localhost:3000",
     "http://localhost:3002",
-    "https://try-lake.vercel.app",
+    "https://food-delivery-bkrk.vercel.app",
+    "https://food-delivery-dasboard-pk5j.vercel.app",
+    "https://food-delivery-dasboard.vercel.app",
 ];
 const corsOptions = {
     origin: (origin, callback) => {

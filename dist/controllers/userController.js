@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createOne = exports.getAll = exports.getUser = exports.getMe = void 0;
+exports.createOne = exports.getAll = exports.getUser = exports.updateUser = exports.getMe = void 0;
 const appError_1 = __importDefault(require("../utils/appError"));
 const catchAsync_1 = __importDefault(require("../utils/catchAsync"));
 const userModel_1 = __importDefault(require("./../models/userModel"));
@@ -52,24 +52,31 @@ const getMe = (req, res, next) => {
         .json({ status: "success", data: { user: req.user } });
 };
 exports.getMe = getMe;
+exports.updateUser = (0, catchAsync_1.default)(function (req, res, next) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const user = yield userModel_1.default.findByIdAndUpdate(req.params.id, { role: req.body.role }, {
+            new: true,
+            runValidators: true,
+        });
+        if (!user) {
+            return next(new appError_1.default("No user found with that ID :IvalidId", 404));
+        }
+        res.status(200).json({
+            status: "success",
+            data: { user },
+        });
+    });
+});
 exports.getUser = (0, catchAsync_1.default)(function (req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
-        const user = yield userModel_1.default.findById(req.params.id);
+        const user = yield userModel_1.default.findOne({ _id: req.params.id });
         console.log(user);
         if (!user) {
             return next(new appError_1.default("No document found with that ID :IvalidId", 404));
         }
-        if (user) {
-            res.status(200).json({
-                status: "success",
-                data: { data: user },
-            });
-        }
-        else {
-            res.status(200).json({
-                status: "success",
-                message: "The InvalidId",
-            });
-        }
+        res.status(200).json({
+            status: "success",
+            data: { data: user },
+        });
     });
 });
