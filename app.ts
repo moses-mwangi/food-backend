@@ -89,10 +89,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api/users", userRouter);
-app.use("/api/userE", userE);
-app.use("/api/restaurants", restRouter);
-app.use("/api/orders", orderRouter);
+app.get("/api/users", userRouter);
+app.get("/apgetrE", userE);
+app.get("/api/restaurants", restRouter);
+app.get("/api/orders", orderRouter);
 
 app.get("/api", userRouter);
 app.get("/app", userRouter);
