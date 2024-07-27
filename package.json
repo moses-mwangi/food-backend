@@ -4,7 +4,7 @@
   "description": "food delivery",
   "main": "dist/server.js",
   "scripts": {
-    "start": "nodemon server.ts",
+    "start": "node dist/server.js",
     "build": "tsc",
     "start:prod": "node dist/server.js"
   },
