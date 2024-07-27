@@ -2,7 +2,7 @@
   "name": "food-backend",
   "version": "1.0.0",
   "description": "food delivery",
-  "main": "server.ts",
+  "main": "dist/server.js",
   "scripts": {
     "start": "nodemon server.ts",
     "build": "tsc",
