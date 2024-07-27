@@ -89,15 +89,15 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/api/users", userRouter);
-app.get("/apgetrE", userE);
-app.get("/api/restaurants", restRouter);
-app.get("/api/orders", orderRouter);
+app.use("/api/users", userRouter);
+app.use("/userE", userE);
+app.use("/api/restaurants", restRouter);
+app.use("/api/orders", orderRouter);
 
-app.get("/api", userRouter);
-app.get("/app", userRouter);
+// app.get("/api", userRouter);
+// app.get("/app", userRouter);
 
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
   res.send("Welcome to the API");
 });
 
