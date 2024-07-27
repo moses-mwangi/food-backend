@@ -14,12 +14,11 @@ import path from "path";
 const app = express();
 
 const allowedOrigins = [
-  "https://food-delivery-dasboard.vercel.app",
-  "https://food-delivery-five-eta.vercel.app",
   "http://localhost:3000",
   "http://localhost:3002",
-  "https://try-lake.vercel.app",
+  "https://food-delivery-bkrk.vercel.app",
   "https://food-delivery-dasboard-pk5j.vercel.app",
+  "https://food-delivery-dasboard.vercel.app",
 ];
 
 const corsOptions = {

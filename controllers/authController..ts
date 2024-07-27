@@ -5,7 +5,7 @@ import User, { IUser } from "../models/userModel";
 import AppError from "../utils/appError";
 
 interface AuthenticatedRequest extends Request {
-  user?: IUser; // Adjust IUser to the correct type for your user
+  user?: IUser;
 }
 
 const signToken = (id: string): string => {

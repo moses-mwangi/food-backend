@@ -72,8 +72,8 @@ export const placeOrder = catchAsync(
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
-      success_url: `https://food-delivery-five-eta.vercel.app/order-success?orderId=${newOrder._id}`,
-      cancel_url: `http://localhost:3000/order-cancel?orderId=${newOrder._id}`,
+      success_url: `https://food-delivery-bkrk.vercel.app/order-success?orderId=${newOrder._id}`,
+      cancel_url: `https://food-delivery-bkrk.vercel.app/order-cancel?orderId=${newOrder._id}`,
       metadata: {
         orderId: newOrder._id!.toString(),
       },
