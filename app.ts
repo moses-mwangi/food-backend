@@ -94,6 +94,10 @@ app.use("/api/userE", userE);
 app.use("/api/restaurants", restRouter);
 app.use("/api/orders", orderRouter);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the API");
+});
+
 app.all("*", (req, res, next) => {
   next(new AppError(`Cant find ${req.originalUrl} on this server`, 400));
 });
