@@ -3,15 +3,14 @@ import dotenv from "dotenv";
 import app from "./app";
 
 const env = process.env.NODE_ENV || "development";
-dotenv.config({ path: `./.env.${env}` });
+// dotenv.config({ path: `./.env.${env}` });
+dotenv.config({ path: "config.env" });
 
 process.on("uncaughtException", (err) => {
   console.error("UNHANDLED EXCEPTION ---- Shutting down 💥");
   console.error(err.name, err.stack, err.message);
   process.exit(1);
 });
-
-// const db = String(process.env.DATABASE);
 
 const db =
   "mongodb+srv://mosesmwangime:4Owf3JAY8YpVbT0y@fooddelivercluster.q3ihtsr.mongodb.net/delivery?retryWrites=true&w=majority&appName=FoodDeliverCluster";
