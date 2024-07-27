@@ -94,6 +94,7 @@ app.use("/api/userE", userE);
 app.use("/api/restaurants", restRouter);
 app.use("/api/orders", orderRouter);
 
+app.use("/api", userRouter);
 app.get("/", (req, res) => {
   res.send("Welcome to the API");
 });
