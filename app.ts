@@ -90,14 +90,10 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/users", userRouter);
-app.use("/userE", userE);
 app.use("/api/restaurants", restRouter);
 app.use("/api/orders", orderRouter);
 
-// app.get("/api", userRouter);
-// app.get("/app", userRouter);
-
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Welcome to the API");
 });
 
