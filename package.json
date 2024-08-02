@@ -2,12 +2,12 @@
   "name": "food-backend",
   "version": "1.0.0",
   "description": "food delivery",
-  "main": "server.ts",
+  "main": "dist/server.js",
   "scripts": {
     "start": "nodemon server.ts",
     "build": "tsc",
-    "start:prod": "node server.ts",
-    "vercel-build": "echo hello"
+    "start:prod": "node dist/server.js",
+    "debug": "ndb dist/server.js"
   },
   "author": "moses",
   "license": "ISC",
