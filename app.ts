@@ -4,7 +4,6 @@ import mimeTypes from "mime-types";
 import cors from "cors";
 import cookiParser from "cookie-parser";
 import userRouter from "./routes/users";
-import userE from "./routes/userE";
 import restRouter from "./routes/restaurants";
 import orderRouter from "./routes/orders";
 import globalErrorHandler from "./controllers/errorController";
