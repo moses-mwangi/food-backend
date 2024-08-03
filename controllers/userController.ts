@@ -81,7 +81,7 @@ export const getUser = catchAsync(async function (
   res: Response,
   next: NextFunction
 ) {
-  const user = await User.findOne({ _id: req.params.id });
+  const user = await User.findById(req.params.id);
   console.log(user);
 
   if (!user) {

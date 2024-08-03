@@ -69,7 +69,7 @@ exports.updateUser = (0, catchAsync_1.default)(function (req, res, next) {
 });
 exports.getUser = (0, catchAsync_1.default)(function (req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
-        const user = yield userModel_1.default.findOne({ _id: req.params.id });
+        const user = yield userModel_1.default.findById(req.params.id);
         console.log(user);
         if (!user) {
             return next(new appError_1.default("No document found with that ID :IvalidId", 404));
